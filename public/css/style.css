@@ -435,3 +435,18 @@ a.btn:focus{outline: 0;}
 	margin: -20px 0 0;
 }
 
+.er {
+    position: absolute;
+    display: none;
+    background-color: #ddd;
+    width: 200px;
+}
+
+.er > li {
+    clear: both;
+    list-style: none;
+}
+
+.conceal:hover ul {
+    display: block;
+}
