@@ -438,13 +438,15 @@ a.btn:focus{outline: 0;}
 .er {
     position: absolute;
     display: none;
-    background-color: #ddd;
+    background-color: #e2b63a;
     width: 200px;
 }
 
 .er > li {
     clear: both;
     list-style: none;
+    line-height: 40px;
+    height: 40px;
 }
 
 .conceal:hover ul {

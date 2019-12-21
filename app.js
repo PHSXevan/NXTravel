@@ -1,5 +1,6 @@
 var express = require('express')
 var path = require('path')
+var router = require("./router")
 
 var app = express()
 
@@ -11,9 +12,8 @@ app.engine('html',require('express-art-template'))
 //默认是views目录，方便更改
 app.set('views',path.join(__dirname,'./views'))
 
-app.get('/',function(req,res){
-	res.render('index.html')
-})
+//把路由挂载到 app 中 
+app.use(router)
 
 app.listen(3000,function(){
 	console.log('running...')

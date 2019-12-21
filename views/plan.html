@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free Bootstrap Themes - Free Responsive Html5 Templates">
+    <meta name="author" content="#">
+
+	<title>NXTravel | 旅行规划</title>
+
+	<!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css"  type="text/css">
+	
+	<!-- Owl Carousel Assets -->
+    <link href="../public/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../public/owl-carousel/owl.theme.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="../public/css/style.css">
+	
+	<!-- Custom Fonts -->
+    <link rel="stylesheet" href="../public/font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<header>
+
+	{{ include './head.html'}}
+
+	<div class="header-text hidden-xs">
+		<div class="col-md-12 text-center">
+			<h1>NX<span style="color: #FFDE00;font-size: 90px;">.</span> Travel<span style="color: #FFDE00;font-size: 90px;">.</span>Protal</h1>
+			<hr>
+			<p>贺兰山下，黄河岸边。天蓝蓝，水茫茫，风吹芦花鱼米香；不是江南胜似江南——宁夏这边，独领塞外好风光！</p>
+			<a href="single.html" class="btn btn-header-1 btn-xl page-scroll">塞外江南</a>
+			<a href="single.html" class="btn btn-header-2 btn-xl page-scroll">神奇宁夏</a>
+		</div>
+	</div><!-- /header-text -->
+	
+</header>
+	
+	{{ include './foot.html'}}
+	
+	<!-- jQuery -->
+	<script type="text/javascript" src="../public/js/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+	
+	<!-- Custom Theme JavaScript -->
+	<script src="../public/js/agency.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="../public/js/jquery.easing.min.js"></script>
+	<script src="../public/js/classie.js"></script>
+	<script src="../public/js/cbpAnimatedHeader.js"></script>
+	
+	<!-- carousel -->
+	<script src="../public/owl-carousel/owl.carousel.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#owl-brand").owlCarousel({
+        autoPlay: 3000,
+        items : 1,
+		itemsDesktop : [1199,1],
+        itemsDesktopSmall : [979,2],
+		navigation: false,
+		navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>']
+      });
+    });
+    </script>
+</body>
+</html>
