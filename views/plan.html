@@ -9,6 +9,8 @@
 
 	<title>NXTravel | 旅行规划</title>
 
+	<link rel="stylesheet" href="../public/css/plan.css"  type="text/css">
+
 	<!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="../public/css/bootstrap.min.css"  type="text/css">
 	
@@ -22,27 +24,129 @@
 	<!-- Custom Fonts -->
     <link rel="stylesheet" href="../public/font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
-
+	<style>
+		header {
+			background: url(../public/images/banner2.jpg)
+		}
+	</style>
 </head>
 <body>
 	<header>
 
 	{{ include './head.html'}}
 
-	<div class="header-text hidden-xs">
-		<div class="col-md-12 text-center">
-			<h1>NX<span style="color: #FFDE00;font-size: 90px;">.</span> Travel<span style="color: #FFDE00;font-size: 90px;">.</span>Protal</h1>
-			<hr>
-			<p>贺兰山下，黄河岸边。天蓝蓝，水茫茫，风吹芦花鱼米香；不是江南胜似江南——宁夏这边，独领塞外好风光！</p>
-			<a href="single.html" class="btn btn-header-1 btn-xl page-scroll">塞外江南</a>
-			<a href="single.html" class="btn btn-header-2 btn-xl page-scroll">神奇宁夏</a>
+	</header>
+
+	<!-- 航空旅行 start -->
+	<div class="aviation">
+		<div class="page">
+			<div class="left">
+				<h2>航空</h2>
+				<p>前往宁夏回族自治区的航空旅行十分便利，整个区有三个机场。</p>
+				<ul>
+					<li>银川河东国际机场。属国内干线机场</li>
+					<li>中卫沙坡头机场</li>
+					<li>固原六盘山机场</li>
+				</ul>
+			</div>
+			<div class="right">
+				<img src="../public/images/p2.png" alt="">
+			</div>
 		</div>
-	</div><!-- /header-text -->
-	
-</header>
-	
+	</div>
+	<!-- 航空旅行 end -->
+
+	<!-- 火车旅行 start -->
+	<div class="train">
+		<div class="page">
+			<div class="left">
+				<h2>火车</h2>
+				<p>火车几乎连通了宁夏的所有城市，十分便捷。</p>
+				<p>高铁已在架设</p>
+			</div>
+			<div class="right">
+				<img src="../public/images/p3.png" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- 火车旅行 end -->
+
+	<!-- 公共交通 start -->
+	<div class="bus">
+		<div class="page">
+			<div class="left">
+				<h2>公共交通</h2>
+				<p>大多数城市有自己的公共交通网络</p>
+				<ul>
+					<li>首府银川有非常方便的BRT。</li>
+					<li>几乎到每个景点都有专门的公交大巴。</li>
+				</ul>
+			</div>
+			<div class="right">
+				<img src="../public/images/p4.png" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- 公共交通 end -->
+
+	<!-- 证件 start -->
+	<div class="card">
+		<div class="page">
+			<div class="left">
+				<h2>证件</h2>
+				<p>无论您搭乘何种交通工具前往宁夏，请确保携带有效证件。</p>
+			</div>
+			<div class="right">
+				<img src="../public/images/p1.png" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- 证件 end -->
+
+	<!-- 气候 start -->
+	<div class="weather">
+		<div class="page">
+			<div class="left">
+				<h2>气候</h2>
+				<p>宁夏地处黄河水系，地势南高北低，呈阶梯状下降，全区属温带大陆性干旱、半干旱气候。</p>
+				<ul>
+					<li>宁夏回族自治区地处中国内陆，为典型的大陆性气候，最南端的六盘山区属半湿润区，卫宁平原以北属干旱区，其他地区为半干旱区。宁夏气候宜人，冬少严寒，夏无酷暑，春暖宜人，秋高气爽。各地年平均气温5.6～10.1℃，自南向北递增；最冷月（1月）平均气温为-7.3℃，最热月（7月）为22.4℃。年降水量在167.2～618.3毫米之间，自南向北递减。</li>
+					<li>宁夏中北部气候干爽，光热资源丰富，全年晴朗天气达300天左右，年日照时数约3000小时；日平均气温≥10℃的积温近3400℃·天，气温日较差达13℃左右。贺兰山脉绵亘于宁夏西北部，山势巍峨雄伟，既削弱了西北寒风的侵袭，又阻挡了腾格里沙漠流沙的东进，成为银川平原的天然屏障，也是中国季风区和非季风区的分界线。</li>
+					<li>六盘山区位于宁夏最南端，终年气候凉爽，空气湿润，林木繁茂，年降水量超过600毫米，成为突起于黄土高原之上的“绿岛”、“湿岛”，有“春来秋去无盛夏”之说，自古以来便是避暑游览的胜地。</li>
+				</ul>
+			</div>
+			<div class="right">
+				<!-- <img src="../public/images/p1.png" alt=""> -->
+			</div>
+		</div>
+	</div>
+	<!-- 气候 end -->
+
+	<!-- 预订行程 start -->
+	<div class="reserve">
+		<div class="page">
+			<div class="left">
+				<h2>预订行程</h2>
+				<p>查看票务等。</p>
+				<ul>
+					<li><a href="https://www.ctrip.com"  target="_blank">携程</a></li>
+					<li><a href="https://www.tuniu.com"  target="_blank">途牛</a></li>
+					<li><a href="https://www.qunar.com"  target="_blank">去哪儿</a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<img src="../public/images/p5.png" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- 预订行程 end -->
+
+	<footer>
+
 	{{ include './foot.html'}}
-	
+
+	<footer>
+
 	<!-- jQuery -->
 	<script type="text/javascript" src="../public/js/jquery-2.1.1.js"></script>
 	<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
