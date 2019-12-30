@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free Bootstrap Themes - Free Responsive Html5 Templates">
+    <meta name="author" content="#">
+
+	<title>NXTravel | 银川市</title>
+
+	<!-- <link rel="stylesheet" href="../public/css/plan.css"  type="text/css"> -->
+
+	<!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css"  type="text/css">
+	
+	<!-- Owl Carousel Assets -->
+    <link href="../public/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../public/owl-carousel/owl.theme.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="../public/css/style.css">
+	
+	<!-- Custom Fonts -->
+    <link rel="stylesheet" href="../public/font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+	<style>
+		header {
+			background: url(../public/images/banner3.jpg) no-repeat scroll center center ;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;height: 750px;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+
+	{{ include './head.html'}}
+
+	</header>
+
+
+ 	<template id="desCardTemplate">
+
+ 		<style>
+			.copy {
+				position: relative;
+				height: 600px;
+				margin-top: 10px;
+			}
+			.sim {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+			}
+			.img {
+				float: left;
+				width: 65%
+			}
+			.intro {
+				float: right;
+				width: 35%;
+			}
+ 		</style>
+
+ 		<div class="copy">
+ 			<!-- 市介绍 start -->
+			<div class="city sim">
+				<div class="img">
+					<img class="cimage">
+				</div>
+				<div class="intro">
+					<p class="ccontent"></p>
+				</div>
+			</div>
+ 			<!-- 市介绍 end -->
+ 		</div>
+ 		<div class="copy">
+ 			<!-- 景点介绍 start -->
+			<div class="scenic sim">
+				<div class="img">
+					<img class="simage">
+				</div>
+				<div class="intro">
+					<p class="scontent"></p>
+				</div>
+			</div>
+ 			<!-- 景点介绍 end -->
+ 		</div>
+ 		<div class="copy">
+ 			<!-- 美食介绍 start -->
+			<div class="cate sim">
+				<div class="img">
+					<img class="oimage">
+				</div>
+				<div class="intro">
+					<p class="ocontent"></p>
+				</div>
+			</div>
+ 			<!-- 美食介绍 end -->
+ 		</div>
+ 	</template>
+
+	<des-card
+		cimage = "../public/images/11.jpg"
+		ccontent = "内容"
+		simage="../public/images/10.jpg"
+		scontent="内容"
+		oimage="../public/images/9.jpg"
+		ocontent="内容"
+	>	
+	</des-card>
+
+
+	<footer>
+
+	{{ include './foot.html'}}
+
+	<footer>
+
+	<!-- jQuery -->
+
+	<script>
+		class DesCard extends HTMLElement {
+			constructor() {
+				super();
+
+				var templateElem = document.getElementById('desCardTemplate');
+				var content = templateElem.content.cloneNode(true);
+				content.querySelector('.copy>.city>.img>img').setAttribute('src',this.getAttribute('cimage'));
+				content.querySelector('.copy>.city>.intro>.ccontent').innerText = this.getAttribute('ccontent');
+				content.querySelector('.copy>.scenic>.img>img').setAttribute('src',this.getAttribute('simage'));
+				content.querySelector('.copy>.scenic>.intro>.scontent').innerText = this.getAttribute('scontent');
+				content.querySelector('.copy>.cate>.img>img').setAttribute('src',this.getAttribute('oimage'));
+				content.querySelector('.copy>.cate>.intro>.ocontent').innerText = this.getAttribute('ocontent');
+				this.appendChild(content);
+			}
+		}
+		window.customElements.define("des-card",DesCard);
+	</script>
+
+	<script type="text/javascript" src="../public/js/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+	
+	<!-- Custom Theme JavaScript -->
+	<script src="../public/js/agency.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="../public/js/jquery.easing.min.js"></script>
+	<script src="../public/js/classie.js"></script>
+	<script src="../public/js/cbpAnimatedHeader.js"></script>
+	
+	<!-- carousel -->
+	<script src="../public/owl-carousel/owl.carousel.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#owl-brand").owlCarousel({
+        autoPlay: 3000,
+        items : 1,
+		itemsDesktop : [1199,1],
+        itemsDesktopSmall : [979,2],
+		navigation: false,
+		navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>']
+      });
+    });
+    </script>
+
+</body>
+</html>
