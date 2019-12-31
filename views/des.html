@@ -1,0 +1,101 @@
+<template>
+
+ 		<style>
+			.copy {
+				position: relative;
+				height: 600px;
+				margin-top: 10px;
+			}
+			.sim {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+			}
+			.img {
+				float: left;
+				width: 65%
+			}
+			.intro {
+				float: right;
+				width: 35%;
+			}
+ 		</style>
+
+ 		<div class="copy">
+ 			<!-- 市介绍 start -->
+			<div class="city sim">
+				<div class="img">
+					<img class="cimage" src="../public/images/9.jpg">
+				</div>
+				<div class="intro">
+					<p class="ccontent">neirong</p>
+				</div>
+			</div>
+ 			<!-- 市介绍 end -->
+ 		</div>
+ 		<div class="copy">
+ 			<!-- 景点介绍 start -->
+			<div class="scenic sim">
+				<div class="img">
+					<img class="simage" src="../public/images/9.jpg">
+				</div>
+				<div class="intro">
+					<p class="scontent">neirong</p>
+				</div>
+			</div>
+ 			<!-- 景点介绍 end -->
+ 		</div>
+ 		<div class="copy">
+ 			<!-- 美食介绍 start -->
+			<div class="cate sim">
+				<div class="img">
+					<img class="oimage" src="../public/images/9.jpg">
+				</div>
+				<div class="intro">
+					<p class="ocontent">neirong</p>
+				</div>
+			</div>
+ 			<!-- 美食介绍 end -->
+ 		</div>
+ 	</template>
+
+<!-- <script>
+		class DesCard extends HTMLElement {
+			constructor() {
+				super();
+
+				 // var shadow = this.attachShadow( { mode: 'open' } );
+				var templateElem = document.getElementById('desCardTemplate');
+				var content = templateElem.content.cloneNode(true);
+
+				content.querySelector('.copy>.city>.img>img').setAttribute('src',this.getAttribute('cimage'));
+				content.querySelector('.copy>.city>.intro>.ccontent').innerText = this.getAttribute('ccontent');
+				content.querySelector('.copy>.scenic>.img>img').setAttribute('src',this.getAttribute('simage'));
+				content.querySelector('.copy>.scenic>.intro>.scontent').innerText = this.getAttribute('scontent');
+				content.querySelector('.copy>.cate>.img>img').setAttribute('src',this.getAttribute('oimage'));
+				content.querySelector('.copy>.cate>.intro>.ocontent').innerText = this.getAttribute('ocontent');
+				this.appendChild(content);
+				// shadow.appendChild(content);
+			}
+			// connectedCallback() {
+   //          console.log('my-app element is connected');
+   //      }
+		}
+		window.customElements.define("des-card",DesCard);
+	</script> -->
+
+<script>
+	(function(){
+		var element = Object.create(HTMLElement.prototype);
+		var template = document.currentScript.ownerDocument.querySelector('template').content;
+		element.createdCallback = function(){
+			var shadowRoot = this.createShadowRoot();
+			var clone = document.importNode(template,true);
+			shadowRoot.appendChild(clone);
+		};
+		document.registerElement('des-card',{
+			prototype:element
+		});
+	})()
+</script>
