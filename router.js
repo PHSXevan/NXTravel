@@ -15,4 +15,8 @@ router.get('/destination',function(req,res){
 	res.render("destination.html")
 })
 
+router.get('/strategy',function(req,res){
+	res.render("strategy.html")
+})
+
 module.exports = router
