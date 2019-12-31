@@ -194,16 +194,20 @@
 		<section class="box-content box-3" id="testimonials">
 			<div class="container">
 				<div id="owl-brand" class="owl-carousel">
+				{{ each specialty}}
 					<div class="row">
 						<div class="col-md-12">
 							<div class="item">
-								<img src="../public/images/partner1.png" class="img-circle" />
-								<div class="comment"><p>枸杞子具有多种保健功效，是卫生部批准的药食两用食物。适量食用有益健康，配合菊杞茶有清肝明目的效果。</p></div>
-								<span>Medlar</span>
+								<img src={{ $value.src}} class="img-circle" />
+								<div class="comment"><p>
+								{{ $value.comment }}
+								<!-- 枸杞子具有多种保健功效，是卫生部批准的药食两用食物。适量食用有益健康，配合菊杞茶有清肝明目的效果。 --></p></div>
+								<span>{{ $value.name}}<!-- Medlar --></span>
 							</div>
 						</div>
 					</div>
-					<div class="row">
+				{{ /each }}
+					<!-- <div class="row">
 						<div class="col-md-12">
 							<div class="item">
 								<img src="../public/images/partner3.png" class="img-circle" />
@@ -220,7 +224,7 @@
 								<span>liquorice</span>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>
@@ -279,13 +283,16 @@
 	                </div>
 				</div>
 				<div class="row">
+				{{ each spot }}
 					<div class="col-md-4">
 						<div class="box-item">
-							<img src="../public/images/12.png" class="img-responsive"/>
+							<img src={{ $value.src }} class="img-responsive"/>
 							<div class="content">
-								<h3>镇北堡西部影城</h3>
-								<p>镇北堡西部影城，位于宁夏回族自治区银川市，是集观光、娱乐、休闲、餐饮、购物于一体的国家AAAAA级旅游景区 。镇北堡西部影城以其古朴、原始、粗犷、荒凉、民间化为特色，主要景点有明城、清城、老银川一条街等多余处影视拍摄景观组成 。2007年4月，镇北堡西部影城被评为“中国最受欢迎旅游目的地”，是中国十大影视基地之一 。电影《大话西游》、《新龙门客栈》、《红高粱》等在此取景 。2018中国黄河旅游大会上被评为“中国黄河50景”。</p>
-								<span>12.20, 2019 BY PHSXevan</span>
+								<h3>{{ $value.name }}
+								<!-- 镇北堡西部影城 --></h3>
+								<p>{{ $value.intro }}
+								<!-- 镇北堡西部影城，位于宁夏回族自治区银川市，是集观光、娱乐、休闲、餐饮、购物于一体的国家AAAAA级旅游景区 。镇北堡西部影城以其古朴、原始、粗犷、荒凉、民间化为特色，主要景点有明城、清城、老银川一条街等多余处影视拍摄景观组成 。2007年4月，镇北堡西部影城被评为“中国最受欢迎旅游目的地”，是中国十大影视基地之一 。电影《大话西游》、《新龙门客栈》、《红高粱》等在此取景 。2018中国黄河旅游大会上被评为“中国黄河50景”。 --></p>
+								<span>{{ $value.time }}<!-- 12.20, 2019 BY PHSXevan --></span>
 							</div>
 						</div>
 						<!-- <div class="box-item">
@@ -297,7 +304,7 @@
 							</div>
 						</div> -->
 					</div>
-					<div class="col-md-4">
+					<!-- <div class="col-md-4">
 						<div class="box-item">
 							<img src="../public/images/10.png" class="img-responsive"/>
 							<div class="content">
@@ -306,16 +313,16 @@
 								<span>12.20, 2019 BY PHSXevan</span>
 							</div>
 						</div>
-						<!-- <div class="box-item">
+						<div class="box-item">
 							<img src="../public/images/11.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Met Dovey’s Parents in Chicago</h3>
 								<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed varius fringilla tortor at euismod. Cras volutpat vehicula libero, nec faucibus urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>
 								<span>MAY 21, 2014 BY VAFPRESS</span>
 							</div>
-						</div> -->
-					</div>
-					<div class="col-md-4">
+						</div>
+					</div> -->
+					<!-- <div class="col-md-4">
 						<div class="box-item">
 							<img src="../public/images/14.png" class="img-responsive"/>
 							<div class="content">
@@ -323,7 +330,7 @@
 								<p>贺兰山脉位于宁夏回族自治区与内蒙古自治区交界处，北起巴彦敖包，南至毛土坑敖包及青铜峡。山势雄伟，若群马奔腾。蒙古语称骏马为“贺兰”，故名贺兰山(此说疑有误，唐代韦蟾有诗云：“贺兰山下果园成”，蒙古人在13世纪才崛起，说源于蒙语只是通用说法）。</p>
 								<span>12.20, 2019 BY PHSXevan</span>
 							</div>
-						</div>
+						</div> -->
 						<!-- <div class="box-item">
 							<img src="../public/images/9.jpg" class="img-responsive"/>
 							<div class="content">
@@ -332,6 +339,7 @@
 								<span>MAY 21, 2014 BY VAFPRESS</span>
 							</div>
 						</div> -->
+					{{ /each }}
 					</div>
 				</div>
 			</div>

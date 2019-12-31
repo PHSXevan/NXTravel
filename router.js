@@ -9,7 +9,9 @@ router.get('/',function(req,res){
 			return res.status(500).send('Server')
 		}
 		res.render("index.html", {
-			cate:JSON.parse(data).cate
+			cate:JSON.parse(data).cate,
+			specialty:JSON.parse(data).specialty,
+			spot:JSON.parse(data).spot
 		})
 	})
 	
