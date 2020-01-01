@@ -6,7 +6,7 @@ var router = express.Router()
 router.get('/',function(req,res){
 	fs.readFile('./db.json','utf8',function(err,data){
 		if(err){
-			return res.status(500).send('Server')
+			return res.status(500).send('Server error')
 		}
 		res.render("index.html", {
 			cate:JSON.parse(data).cate,
@@ -26,7 +26,17 @@ router.get('/destination',function(req,res){
 })
 
 router.get('/strategy',function(req,res){
-	res.render("strategy.html")
+	fs.readFile('./db.json','utf8',function(err,data){
+		if(err){
+			return res.status(500).send('Server error')
+		}
+		res.render("strategy.html",{
+			play:JSON.parse(data).play,
+			ruins:JSON.parse(data).ruins,
+			catewine:JSON.parse(data).catewine
+		})
+	})
+	
 })
 
 module.exports = router

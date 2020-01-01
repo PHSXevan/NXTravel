@@ -1,0 +1,83 @@
+<template>
+
+ 		<style>
+			.copy {
+				position: relative;
+				height: 275px;
+				margin-top: 75px;
+			}
+			.sim {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+			}
+			.img {
+				float: left;
+				width: 45%;
+				text-align: center;
+			}
+			.intro {
+				float: right;
+				width: 50%;
+				margin-right: 20px
+			}
+			h2 {
+				text-align: center;
+				color: #FFDE00;
+				font-size: 4.5em;
+				margin-top: 150px;
+			}
+			p {
+				margin-top: 0;
+				line-height: 2em;
+				font-size: 1.5em;
+			}
+ 		</style>
+			
+	    <h2>石嘴山</h2>
+	                   
+ 		<div class="copy">
+ 			<!-- 市介绍 start -->
+			<div class="city sim">
+				<div class="img">
+					<img src="../public/images/m7.png">
+				</div>
+				<div class="intro">
+					<p>石嘴山市，宁夏回族自治区辖地级市，位居宁夏最北端，东临鄂尔多斯台地，西踞银川平原北部，为典型的温带大陆性气候；辖2个区、1个县。
+					石嘴山市因黄河两岸“山石突出如嘴”而得名，风光优美.石嘴山地理位置优越，地处宁东、蒙西两个国家千亿吨级煤田之间，是呼包银兰经济带、宁夏沿黄经济区、宁蒙陕乌金三角经济区的重要节点城市；黄河穿东过，西依贺兰山，湿地面积达415平方千米。融全国首批5A级旅游景区沙湖为一体。石嘴山市号称“塞上煤城”，因生产无烟煤而闻名。</p>
+				</div>
+			</div>
+ 			<!-- 市介绍 end -->
+ 		</div>
+ 		<div class="copy">
+ 			<!-- 景点介绍 start -->
+			<div class="scenic sim">
+				<div class="img">
+					<img src="../public/images/m8.png">
+				</div>
+				<div class="intro">
+					<p>沙湖，是一处融江南水乡与大漠风光为一体的生态旅游景区。沙湖景区由北面的湖区和南边的沙漠区组成，沙漠区一边是湖，一边是人工渠。
+					沙湖还是观鸟的好去处。冬季沙湖还有冰雕展示和滑雪场。</p>
+					<p>沙湖位于银川市西北约50公里处的平罗县境内。</p>
+					<p>门票:旺季（4月1日-10月31日）60元/人,淡季（11月1日-3月31日）40元/人</p>
+				</div>
+			</div>
+ 			<!-- 景点介绍 end -->
+ 		</div>
+ 	</template>
+
+<script>
+	(function(){
+		var element = Object.create(HTMLElement.prototype);
+		var template = document.currentScript.ownerDocument.querySelector('template').content;
+		element.createdCallback = function(){
+			var shadowRoot = this.createShadowRoot();
+			var clone = document.importNode(template,true);
+			shadowRoot.appendChild(clone);
+		};
+		document.registerElement('shi-card',{
+			prototype:element
+		});
+	})()
+</script>

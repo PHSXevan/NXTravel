@@ -3,8 +3,8 @@
  		<style>
 			.copy {
 				position: relative;
-				height: 600px;
-				margin-top: 10px;
+				height: 275px;
+				margin-top: 75px;
 			}
 			.sim {
 				position: absolute;
@@ -14,22 +14,38 @@
 			}
 			.img {
 				float: left;
-				width: 65%
+				width: 45%;
+				text-align: center;
 			}
 			.intro {
 				float: right;
-				width: 35%;
+				width: 50%;
+				margin-right: 20px
+			}
+			h2 {
+				text-align: center;
+				color: #FFDE00;
+				font-size: 4.5em;
+				margin-top: 150px;
+			}
+			p {
+				margin-top: 0;
+				line-height: 2em;
+				font-size: 1.5em;
 			}
  		</style>
-
+			
+	    <h2>银川</h2>
+	                   
  		<div class="copy">
  			<!-- 市介绍 start -->
 			<div class="city sim">
 				<div class="img">
-					<img class="cimage" src="../public/images/9.jpg">
+					<img src="../public/images/m1.png">
 				</div>
 				<div class="intro">
-					<p class="ccontent">neirong</p>
+					<p>银川市，简称“银”，是宁夏回族自治区的首府，国家历史文化名城，西北地区重要的中心城市之一。是中国历史文化名城，是丝绸之路的节点城市，是深入实施西部大开发战略的重点经济区。
+					银川是历史悠久的塞上古城，早在3万年前就有人类在水洞沟遗址繁衍生息，史上西夏王朝的首都，是国家历史文化名城，民间传说中又称“凤凰城”，古称“兴庆府”、“宁夏城”，素有“塞上江南、鱼米之乡”的美誉，城西有著名的国家级风景名胜区西夏王陵。被评为“中国十大新天府”之一。</p>
 				</div>
 			</div>
  			<!-- 市介绍 end -->
@@ -38,22 +54,28 @@
  			<!-- 景点介绍 start -->
 			<div class="scenic sim">
 				<div class="img">
-					<img class="simage" src="../public/images/9.jpg">
+					<img src="../public/images/m2.png">
 				</div>
 				<div class="intro">
-					<p class="scontent">neirong</p>
+					<p>西夏陵是西夏历代帝王陵以及皇家陵墓，被世人誉为“神秘的奇迹”、“东方金字塔”。
+					中国现存规模最大、地面遗址最完整的帝王陵园之一，也是现存规模最大的一处西夏文化遗址。</p>
+					<p>西夏王陵位于银川市西郊的贺兰山麓，距离银川市区约30公里。</p>
+					<p>门票:75人民币；旅游观光车:20人民币</p>
 				</div>
 			</div>
  			<!-- 景点介绍 end -->
  		</div>
- 		<div class="copy">
+ 		<div class="copy" style="margin-bottom: 20px">
  			<!-- 美食介绍 start -->
 			<div class="cate sim">
 				<div class="img">
-					<img class="oimage" src="../public/images/9.jpg">
+					<img src="../public/images/m3.png">
 				</div>
 				<div class="intro">
-					<p class="ocontent">neirong</p>
+					<p>以展示回族、伊斯兰建筑文化、宗教文化等为特色的主题景区。
+					园区内建有全国最大的回族博物院、金色礼仪大殿、回族民俗村等景观。</p>
+					<p>中华回乡文化园紧临京藏高速公路永宁出口处，距离银川市中心18公里。</p>
+					<p>门票:60人民币 (1月1日-12月31日 周一-周日)</p>
 				</div>
 			</div>
  			<!-- 美食介绍 end -->
@@ -94,7 +116,7 @@
 			var clone = document.importNode(template,true);
 			shadowRoot.appendChild(clone);
 		};
-		document.registerElement('des-card',{
+		document.registerElement('yin-card',{
 			prototype:element
 		});
 	})()

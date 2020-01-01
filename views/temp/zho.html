@@ -1,0 +1,83 @@
+<template>
+
+ 		<style>
+			.copy {
+				position: relative;
+				height: 275px;
+				margin-top: 75px;
+			}
+			.sim {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+			}
+			.img {
+				float: left;
+				width: 45%;
+				text-align: center;
+			}
+			.intro {
+				float: right;
+				width: 50%;
+				margin-right: 20px
+			}
+			h2 {
+				text-align: center;
+				color: #FFDE00;
+				font-size: 4.5em;
+				margin-top: 150px;
+			}
+			p {
+				margin-top: 0;
+				line-height: 2em;
+				font-size: 1.5em;
+			}
+ 		</style>
+			
+	    <h2>中卫</h2>
+	                   
+ 		<div class="copy">
+ 			<!-- 市介绍 start -->
+			<div class="city sim">
+				<div class="img">
+					<img src="../public/images/m13.png">
+				</div>
+				<div class="intro">
+					<p>中卫市，简称"卫"，隶属宁夏回族自治区，位于宁夏回族自治区中西部，宁夏、内蒙古、甘肃三省区交汇处，是黄河中上游第一个自流灌溉市。
+					中卫市地势西南高，东北低，市区平均海拔1225米，地貌类型分为黄河冲积平原、台地、沙漠、山地与丘陵五大单元，属典型的温带大陆性季风气候，因受沙漠影响，日照充足，昼夜温差大。中卫市引黄灌区111万亩，是西北地区重要的商品粮、水产品和设施蔬菜生产基地。</p>
+				</div>
+			</div>
+ 			<!-- 市介绍 end -->
+ 		</div>
+ 		<div class="copy">
+ 			<!-- 景点介绍 start -->
+			<div class="scenic sim">
+				<div class="img">
+					<img src="../public/images/m14.png">
+				</div>
+				<div class="intro">
+					<p>沙坡头旅游区位于宁夏腾格里沙漠东南边缘处，自然景观独特，人文景观丰富，被旅游界专家誉为世界垄断性旅游资源。
+					这里集大漠、黄河、高山、绿洲为一处，极具西北风光之雄奇，又兼江南景色之秀美。</p>
+					<p>沙坡头位于中卫市区以西约20公里处。</p>
+					<p>门票:100元/人</p>
+				</div>
+			</div>
+ 			<!-- 景点介绍 end -->
+ 		</div>
+ 	</template>
+
+<script>
+	(function(){
+		var element = Object.create(HTMLElement.prototype);
+		var template = document.currentScript.ownerDocument.querySelector('template').content;
+		element.createdCallback = function(){
+			var shadowRoot = this.createShadowRoot();
+			var clone = document.importNode(template,true);
+			shadowRoot.appendChild(clone);
+		};
+		document.registerElement('zho-card',{
+			prototype:element
+		});
+	})()
+</script>

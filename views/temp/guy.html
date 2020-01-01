@@ -1,0 +1,96 @@
+<template>
+
+ 		<style>
+			.copy {
+				position: relative;
+				height: 275px;
+				margin-top: 75px;
+			}
+			.sim {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+			}
+			.img {
+				float: left;
+				width: 45%;
+				text-align: center;
+			}
+			.intro {
+				float: right;
+				width: 50%;
+				margin-right: 20px
+			}
+			h2 {
+				text-align: center;
+				color: #FFDE00;
+				font-size: 4.5em;
+				margin-top: 150px;
+			}
+			p {
+				margin-top: 0;
+				line-height: 2em;
+				font-size: 1.5em;
+			}
+ 		</style>
+			
+	    <h2>固原</h2>
+	                   
+ 		<div class="copy">
+ 			<!-- 市介绍 start -->
+			<div class="city sim">
+				<div class="img">
+					<img src="../public/images/m4.png">
+				</div>
+				<div class="intro">
+					<p>固原，宁夏回族自治区辖地级市，古称大原、高平、萧关、原州，简称“固”，位于宁夏回族自治区南部，是宁夏回族自治区副中心城市，位于中国黄土高原的西北边缘。是典型的大陆性气候；辖1个区、4个县。
+					固原市位于西安、兰州、银川三省会城市所构成的三角地带中心，宁夏五个地级市之一和唯一的非沿黄城市。 陕甘宁革命老区振兴规划中心城市，宁南区域中心城市，政治，经济，文化中心和交通枢纽。</p>
+				</div>
+			</div>
+ 			<!-- 市介绍 end -->
+ 		</div>
+ 		<div class="copy">
+ 			<!-- 景点介绍 start -->
+			<div class="scenic sim">
+				<div class="img">
+					<img src="../public/images/m5.png">
+				</div>
+				<div class="intro">
+					<p>六盘山，是中国最年轻的山脉之一。六盘山山腰地带降雨较多，气候较为湿润，宜于林木生长，有较繁茂的天然次生阔叶林，使六盘山成为黄土高原上一个“绿色岛屿”。</p>
+					<p>景点地址：固原市泾源县河泾镇</p>
+					<p>门票:65人民币</p>
+				</div>
+			</div>
+ 			<!-- 景点介绍 end -->
+ 		</div>
+ 		<div class="copy" style="margin-bottom: 20px">
+ 			<!-- 美食介绍 start -->
+			<div class="cate sim">
+				<div class="img">
+					<img src="../public/images/m6.png">
+				</div>
+				<div class="intro">
+					<p>凉殿峡又名良天峡，居六盘山腹地，是著名的风景名胜地。在群山挟持下有一道长达10余公里的峡谷，清澈见底的泾河水穿峡而出。元世祖忽必烈在1258年南征云南时，屯兵六盘山，也在这里避暑。</p>
+					<p>地址：宁夏回族自治区固原市泾源县县城西南23公里处</p>
+					<p>门票:免费</p>
+				</div>
+			</div>
+ 			<!-- 美食介绍 end -->
+ 		</div>
+ 	</template>
+
+<script>
+	(function(){
+		var element = Object.create(HTMLElement.prototype);
+		var template = document.currentScript.ownerDocument.querySelector('template').content;
+		element.createdCallback = function(){
+			var shadowRoot = this.createShadowRoot();
+			var clone = document.importNode(template,true);
+			shadowRoot.appendChild(clone);
+		};
+		document.registerElement('guy-card',{
+			prototype:element
+		});
+	})()
+</script>

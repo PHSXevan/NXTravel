@@ -41,8 +41,6 @@
 			<h1>NX<span style="color: #FFDE00;font-size: 90px;">.</span> Travel<span style="color: #FFDE00;font-size: 90px;">.</span>Strategy</h1>
 			<hr>
 			<p>与你并肩，去广阔的沙漠，一起去看一看千年不倒的胡杨，和那搏击长空的苍鹰；一起去听一听那丝绸路上的驼铃，还有那历史遗落的风音。</p>
-			<!-- <a href="/#about" class="btn btn-header-1 btn-xl page-scroll">塞外江南</a>
-			<a href="/#about" class="btn btn-header-2 btn-xl page-scroll">神奇宁夏</a> -->
 		</div>
 	</div><!-- /header-text -->
 
@@ -54,66 +52,24 @@
 				<div class="container">
 					<div class="row heading">
 						 <div class="col-lg-12">	
-		                    <h2>美食</h2>
+		                    <h2>玩乐</h2>
 		                    <hr class="line02">
-	                    	<div class="intro">Top Ten Scenic Spots</div>
+	                    	<div class="intro">libertinism</div>
 		                </div>
 					</div>
 					<div class="row">
+					{{ each play }}
 						<div class="col-md-4">
 							<div class="box-item">
-								<img src="../public/images/12.png" class="img-responsive"/>
+								<img src={{ $value.src }} class="img-responsive"/>
 								<div class="content">
-									<h3>镇北堡西部影城</h3>
-									<p>镇北堡西部影城，位于宁夏回族自治区银川市，是集观光、娱乐、休闲、餐饮、购物于一体的国家AAAAA级旅游景区 。镇北堡西部影城以其古朴、原始、粗犷、荒凉、民间化为特色，主要景点有明城、清城、老银川一条街等多余处影视拍摄景观组成 。2007年4月，镇北堡西部影城被评为“中国最受欢迎旅游目的地”，是中国十大影视基地之一 。电影《大话西游》、《新龙门客栈》、《红高粱》等在此取景 。2018中国黄河旅游大会上被评为“中国黄河50景”。</p>
-									<span>12.20, 2019 BY PHSXevan</span>
-								</div>
-							</div>
-							<div class="box-item">
-								<img src="../public/images/13.jpg" class="img-responsive"/>
-								<div class="content">
-									<h3>Brainstorming Wedding Ideas</h3>
-									<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis, viverra feugiat ipsum volutpat vitae. Fusce justo turpis, sodales sed placerat non, suscipit at diam.</p>
-									<span>MAY 21, 2014 BY VAFPRESS</span>
+									<h3>{{ $value.name }}</h3>
+									<p>{{ $value.scene }}</p>
+									<span>{{ $value.time }}</span>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="box-item">
-								<img src="../public/images/10.png" class="img-responsive"/>
-								<div class="content">
-									<h3>沙坡头</h3>
-									<p>沙坡头,国家AAAAA级旅游景区，国家级沙漠生态自然保护区.沙坡头位于宁夏回族自治区中卫市城区西部腾格里沙漠的东南缘。沙坡头集大漠、黄河、高山、绿洲为一处，具西北风光之雄奇，兼江南景色之秀美。有中国最大的天然滑沙场，有横跨黄河的“天下黄河第一索”，有黄河文化代表古老水车，有黄河上最古老的运输工具羊皮筏子，有沙漠中难得一见的海市蜃楼。可以骑骆驼穿越腾格里沙漠，可以乘坐越野车沙海冲浪，咫尺之间可以领略大漠孤烟、长河落日的奇观。</p>
-									<span>12.20, 2019 BY PHSXevan</span>
-								</div>
-							</div>
-							<div class="box-item">
-								<img src="../public/images/11.jpg" class="img-responsive"/>
-								<div class="content">
-									<h3>Met Dovey’s Parents in Chicago</h3>
-									<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed varius fringilla tortor at euismod. Cras volutpat vehicula libero, nec faucibus urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>
-									<span>MAY 21, 2014 BY VAFPRESS</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="box-item">
-								<img src="../public/images/14.png" class="img-responsive"/>
-								<div class="content">
-									<h3>贺兰山</h3>
-									<p>贺兰山脉位于宁夏回族自治区与内蒙古自治区交界处，北起巴彦敖包，南至毛土坑敖包及青铜峡。山势雄伟，若群马奔腾。蒙古语称骏马为“贺兰”，故名贺兰山(此说疑有误，唐代韦蟾有诗云：“贺兰山下果园成”，蒙古人在13世纪才崛起，说源于蒙语只是通用说法）。</p>
-									<span>12.20, 2019 BY PHSXevan</span>
-								</div>
-							</div>
-							<div class="box-item">
-								<img src="../public/images/9.jpg" class="img-responsive"/>
-								<div class="content">
-									<h3>A Sweet Escape to Paris</h3>
-									<p>Proin lobortis mattis odio non ornare. Sed tempor nisi eu hendrerit luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras et velit id sem tincidunt convallis ac eget quam. Vestibulum posuere porttitor sapien et fringilla. Donec laoreet ultricies sagittis. Suspendisse potenti.</p>
-									<span>MAY 21, 2014 BY VAFPRESS</span>
-								</div>
-							</div>
-						</div>
+					{{ /each }}
 					</div>
 				</div>
 			</section>
@@ -122,66 +78,24 @@
 			<div class="container">
 				<div class="row heading">
 					 <div class="col-lg-12">	
-	                    <h2>美食</h2>
+	                    <h2>遗址</h2>
 	                    <hr class="line02">
-                    	<div class="intro">Top Ten Scenic Spots</div>
+                    	<div class="intro">Historic Site</div>
 	                </div>
 				</div>
 				<div class="row">
+				{{ each ruins }}
 					<div class="col-md-4">
 						<div class="box-item">
-							<img src="../public/images/12.png" class="img-responsive"/>
+							<img src={{ $value.src }} class="img-responsive"/>
 							<div class="content">
-								<h3>镇北堡西部影城</h3>
-								<p>镇北堡西部影城，位于宁夏回族自治区银川市，是集观光、娱乐、休闲、餐饮、购物于一体的国家AAAAA级旅游景区 。镇北堡西部影城以其古朴、原始、粗犷、荒凉、民间化为特色，主要景点有明城、清城、老银川一条街等多余处影视拍摄景观组成 。2007年4月，镇北堡西部影城被评为“中国最受欢迎旅游目的地”，是中国十大影视基地之一 。电影《大话西游》、《新龙门客栈》、《红高粱》等在此取景 。2018中国黄河旅游大会上被评为“中国黄河50景”。</p>
-								<span>12.20, 2019 BY PHSXevan</span>
-							</div>
-						</div>
-						<div class="box-item">
-							<img src="../public/images/13.jpg" class="img-responsive"/>
-							<div class="content">
-								<h3>Brainstorming Wedding Ideas</h3>
-								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis, viverra feugiat ipsum volutpat vitae. Fusce justo turpis, sodales sed placerat non, suscipit at diam.</p>
-								<span>MAY 21, 2014 BY VAFPRESS</span>
+								<h3>{{ $value.name }}</h3>
+								<p>{{ $value.history }}</p>
+								<span>{{ $value.time }}</span>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="../public/images/10.png" class="img-responsive"/>
-							<div class="content">
-								<h3>沙坡头</h3>
-								<p>沙坡头,国家AAAAA级旅游景区，国家级沙漠生态自然保护区.沙坡头位于宁夏回族自治区中卫市城区西部腾格里沙漠的东南缘。沙坡头集大漠、黄河、高山、绿洲为一处，具西北风光之雄奇，兼江南景色之秀美。有中国最大的天然滑沙场，有横跨黄河的“天下黄河第一索”，有黄河文化代表古老水车，有黄河上最古老的运输工具羊皮筏子，有沙漠中难得一见的海市蜃楼。可以骑骆驼穿越腾格里沙漠，可以乘坐越野车沙海冲浪，咫尺之间可以领略大漠孤烟、长河落日的奇观。</p>
-								<span>12.20, 2019 BY PHSXevan</span>
-							</div>
-						</div>
-						<div class="box-item">
-							<img src="../public/images/11.jpg" class="img-responsive"/>
-							<div class="content">
-								<h3>Met Dovey’s Parents in Chicago</h3>
-								<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed varius fringilla tortor at euismod. Cras volutpat vehicula libero, nec faucibus urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>
-								<span>MAY 21, 2014 BY VAFPRESS</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="../public/images/14.png" class="img-responsive"/>
-							<div class="content">
-								<h3>贺兰山</h3>
-								<p>贺兰山脉位于宁夏回族自治区与内蒙古自治区交界处，北起巴彦敖包，南至毛土坑敖包及青铜峡。山势雄伟，若群马奔腾。蒙古语称骏马为“贺兰”，故名贺兰山(此说疑有误，唐代韦蟾有诗云：“贺兰山下果园成”，蒙古人在13世纪才崛起，说源于蒙语只是通用说法）。</p>
-								<span>12.20, 2019 BY PHSXevan</span>
-							</div>
-						</div>
-						<div class="box-item">
-							<img src="../public/images/9.jpg" class="img-responsive"/>
-							<div class="content">
-								<h3>A Sweet Escape to Paris</h3>
-								<p>Proin lobortis mattis odio non ornare. Sed tempor nisi eu hendrerit luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras et velit id sem tincidunt convallis ac eget quam. Vestibulum posuere porttitor sapien et fringilla. Donec laoreet ultricies sagittis. Suspendisse potenti.</p>
-								<span>MAY 21, 2014 BY VAFPRESS</span>
-							</div>
-						</div>
-					</div>
+				{{ /each }}
 				</div>
 			</div>
 		</section>
@@ -196,60 +110,18 @@
 	                </div>
 				</div>
 				<div class="row">
+				{{ each catewine }}
 					<div class="col-md-4">
 						<div class="box-item">
-							<img src="../public/images/12.png" class="img-responsive"/>
+							<img src={{ $value.src }} class="img-responsive"/>
 							<div class="content">
-								<h3>镇北堡西部影城</h3>
-								<p>镇北堡西部影城，位于宁夏回族自治区银川市，是集观光、娱乐、休闲、餐饮、购物于一体的国家AAAAA级旅游景区 。镇北堡西部影城以其古朴、原始、粗犷、荒凉、民间化为特色，主要景点有明城、清城、老银川一条街等多余处影视拍摄景观组成 。2007年4月，镇北堡西部影城被评为“中国最受欢迎旅游目的地”，是中国十大影视基地之一 。电影《大话西游》、《新龙门客栈》、《红高粱》等在此取景 。2018中国黄河旅游大会上被评为“中国黄河50景”。</p>
-								<span>12.20, 2019 BY PHSXevan</span>
+								<h3>{{ $value.name }}</h3>
+								<p>{{ $value.culture}}</p>
+								<span>{{ $value.time }}</span>
 							</div>
-						</div>
-						<div class="box-item">
-							<img src="../public/images/13.jpg" class="img-responsive"/>
-							<div class="content">
-								<h3>Brainstorming Wedding Ideas</h3>
-								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis, viverra feugiat ipsum volutpat vitae. Fusce justo turpis, sodales sed placerat non, suscipit at diam.</p>
-								<span>MAY 21, 2014 BY VAFPRESS</span>
-							</div>
-						</div>
+						</div>					
 					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="../public/images/10.png" class="img-responsive"/>
-							<div class="content">
-								<h3>沙坡头</h3>
-								<p>沙坡头,国家AAAAA级旅游景区，国家级沙漠生态自然保护区.沙坡头位于宁夏回族自治区中卫市城区西部腾格里沙漠的东南缘。沙坡头集大漠、黄河、高山、绿洲为一处，具西北风光之雄奇，兼江南景色之秀美。有中国最大的天然滑沙场，有横跨黄河的“天下黄河第一索”，有黄河文化代表古老水车，有黄河上最古老的运输工具羊皮筏子，有沙漠中难得一见的海市蜃楼。可以骑骆驼穿越腾格里沙漠，可以乘坐越野车沙海冲浪，咫尺之间可以领略大漠孤烟、长河落日的奇观。</p>
-								<span>12.20, 2019 BY PHSXevan</span>
-							</div>
-						</div>
-						<div class="box-item">
-							<img src="../public/images/11.jpg" class="img-responsive"/>
-							<div class="content">
-								<h3>Met Dovey’s Parents in Chicago</h3>
-								<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed varius fringilla tortor at euismod. Cras volutpat vehicula libero, nec faucibus urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>
-								<span>MAY 21, 2014 BY VAFPRESS</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="../public/images/14.png" class="img-responsive"/>
-							<div class="content">
-								<h3>贺兰山</h3>
-								<p>贺兰山脉位于宁夏回族自治区与内蒙古自治区交界处，北起巴彦敖包，南至毛土坑敖包及青铜峡。山势雄伟，若群马奔腾。蒙古语称骏马为“贺兰”，故名贺兰山(此说疑有误，唐代韦蟾有诗云：“贺兰山下果园成”，蒙古人在13世纪才崛起，说源于蒙语只是通用说法）。</p>
-								<span>12.20, 2019 BY PHSXevan</span>
-							</div>
-						</div>
-						<div class="box-item">
-							<img src="../public/images/9.jpg" class="img-responsive"/>
-							<div class="content">
-								<h3>A Sweet Escape to Paris</h3>
-								<p>Proin lobortis mattis odio non ornare. Sed tempor nisi eu hendrerit luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras et velit id sem tincidunt convallis ac eget quam. Vestibulum posuere porttitor sapien et fringilla. Donec laoreet ultricies sagittis. Suspendisse potenti.</p>
-								<span>MAY 21, 2014 BY VAFPRESS</span>
-							</div>
-						</div>
-					</div>
+				{{ /each }}	
 				</div>
 			</div>
 		</section>

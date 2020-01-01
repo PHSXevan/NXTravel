@@ -27,7 +27,11 @@
     <link rel="stylesheet" href="../public/font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
 
-	<link rel="import" href="/views/des.html">
+	<link rel="import" href="views/temp/yin.html">
+	<link rel="import" href="views/temp/guy.html">
+	<link rel="import" href="views/temp/shi.html">
+	<link rel="import" href="views/temp/wuz.html">
+	<link rel="import" href="views/temp/zho.html">
 
 	<style>
 		header {
@@ -38,12 +42,30 @@
 <body>
 
 	<header>
-
 	{{ include './head.html'}}
+
+	<div class="header-text hidden-xs">
+		<div class="col-md-12 text-center">
+			<h1>NX<span style="color: #FFDE00;font-size: 90px;">.</span> Travel<span style="color: #FFDE00;font-size: 90px;">.</span>Destination</h1>
+			<hr>
+			<p>宁夏，尽显北国大美之魂!</p>
+			<!-- <a href="/#about" class="btn btn-header-1 btn-xl page-scroll">塞外江南</a>
+			<a href="/#about" class="btn btn-header-2 btn-xl page-scroll">神奇宁夏</a> -->
+		</div>
+	</div><!-- /header-text -->
+
 
 	</header>
  	
-	<des-card></des-card>
+	<yin-card id="y"></yin-card>
+
+	<shi-card id="s"></shi-card>
+
+	<zho-card id="z"></zho-card>
+
+	<wuz-card id="w"></wuz-card>
+
+	<guy-card id="g"></guy-card>
 
 
 	<footer>
@@ -53,7 +75,21 @@
 	<footer>
 
 	<!-- jQuery -->
-		
+	<!-- <script src="/jquery/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	  $("#yin").mousedown(function(){
+	  	$("shi-card").hide();
+	  	$("#z").hide();
+	  	$("#w").hide();
+	  	$("#g").hide();
+	  	$("yin-card").show();
+	  });
+	  // $("#yin").click(function(){
+	  // 	$("yin-card").show();
+	  // });
+	});
+	</script> -->	
 	<script type="text/javascript" src="../public/js/jquery-2.1.1.js"></script>
 	<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
 	
